@@ -1,0 +1,1 @@
+web: gunicorn e_commerce_page_FM.wsgi
