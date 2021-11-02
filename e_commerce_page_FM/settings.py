@@ -7,7 +7,10 @@ SECRET_KEY = 'django-insecure-3lv@@7db4xdhx=)eelw07b#n#p=!-r)_((a*5a_v$jp20lt=mm
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'e-commerce-page-fm.herokuapp.com',
+    '127.0.0.1'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
