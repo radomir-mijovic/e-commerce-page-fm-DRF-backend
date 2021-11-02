@@ -57,8 +57,12 @@ WSGI_APPLICATION = 'e_commerce_page_FM.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd8m4umji95i33f',
+        'HOST': 'ec2-52-22-81-147.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'yiubwjwtzckeru',
+        'PASSWORD': '68979605a8614a5342816ba3f9f4e753a702cdcc8daf5cc2ece6685d96a8c2a2'
     }
 }
 

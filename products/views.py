@@ -9,6 +9,8 @@ from .serizlizers import ProductsSerializer, ProductImagesSerializer
 
 class ProductsListView(ListAPIView):
 
+    queryset = Products
+
     def get(self, request, **kwargs):
         products = Products.objects.all()
         serializer = ProductsSerializer(products, many=True)
