@@ -109,7 +109,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://suspicious-booth-f59ae1.netlify.app",
+    "https://e-commerce-page-fm.netlify.app",
 ]
 
 
