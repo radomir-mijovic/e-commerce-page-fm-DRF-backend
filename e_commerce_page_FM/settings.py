@@ -3,9 +3,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-3lv@@7db4xdhx=)eelw07b#n#p=!-r)_((a*5a_v$jp20lt=mm'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'e-commerce-page-fm.herokuapp.com',
@@ -58,14 +58,13 @@ WSGI_APPLICATION = 'e_commerce_page_FM.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd8m4umji95i33f',
-        'HOST': 'ec2-52-22-81-147.compute-1.amazonaws.com',
+        'NAME': os.environ.get('NAME'),
+        'HOST': os.environ.get('HOST'),
         'PORT': 5432,
-        'USER': 'yiubwjwtzckeru',
-        'PASSWORD': '68979605a8614a5342816ba3f9f4e753a702cdcc8daf5cc2ece6685d96a8c2a2'
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD')
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -82,7 +81,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -95,7 +93,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -112,11 +109,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://e-commerce-page-fm.netlify.app",
 ]
 
-
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIA3BILVY3VAZ4M7FMD'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'ecommercepagefm'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_QUERYSTRING_AUTH = False
-
